@@ -14,13 +14,38 @@
 
 /* DESKTOP */
 @media  screen and (min-width: 768px) {
-    #practical, #identity {
+    #practical, #identity, .header {
         display: flex;
         flex-direction: row;
     }
 
     nav ul li {
         display: inline;
+        float: left;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--olive);
+    }
+
+    .header a, .nav ul li a {
+        display: block;        
+        text-align: center;
+        padding: 14px 16px;
+    }
+
+    .side-menu, .hamb {
+        display: none;
+    }
+
+    .active {
+        background-color: var(--eggshell);
+        color: var(--olive);
+        font-weight: bold;
     }
 }
 
@@ -33,14 +58,6 @@
     }
 
     /* NAV BAR */
-    /* Header */
-    .header{
-        background-color: var(--olive);
-        box-shadow: 1px 1px 5px 0px var(--gray);
-        position: sticky;
-        top: 0;
-        width: 100%;
-    }
 
     /* Logo */
     .logo{
@@ -60,18 +77,9 @@
 
     }
 
-    a {
-        text-decoration: none;
-    }
-
     .menu a{
         display: block;
         padding: 30px;
-        color: var(--eggshell);
-    }
-
-    .menu a:hover{
-        background-color: var(--gray);
     }
 
     .nav{
@@ -141,12 +149,33 @@
 }
 
 
-
+/* COMMON PROPERTIES */
 body {
     background-color: var(--eggshell);
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.header {
+    background-color: var(--olive);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header a, header nav ul li a {
+    text-decoration: none;
+}
+
+.menu a {
+    color:  var(--eggshell);
+}
+
+.menu a:hover {
+    background-color: var(--eggshell);
+    color: var(--olive);
+    font: bold;
+}
 
 #carol-marconnet-pic {
    width: 100px; 
