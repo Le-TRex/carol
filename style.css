@@ -19,6 +19,11 @@
         flex-direction: row;
     }
 
+    #name-and-catchphrase {
+        display: flex;
+        flex-direction: column;
+    }
+
     /* MENU */
     nav ul li {
         display: inline;
