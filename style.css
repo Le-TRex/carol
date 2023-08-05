@@ -19,6 +19,7 @@
         flex-direction: row;
     }
 
+    /* MENU */
     nav ul li {
         display: inline;
         float: left;
@@ -47,6 +48,15 @@
         color: var(--olive);
         font-weight: bold;
     }
+
+    /* MAIN */
+    main {
+        padding: 10px 30px;
+    }
+
+    .icon {
+        width: 50px;
+    }
 }
 
 
@@ -57,8 +67,15 @@
         flex-direction: column;
     }
 
-    /* NAV BAR */
+    #identity {
+        text-align: center;
+    }
 
+    #carol-marconnet-pic {
+        align-self: center;
+    }
+
+    /* NAV BAR */
     /* Logo */
     .logo{
         display: inline-block;
@@ -146,6 +163,27 @@
         top:0;
     }
 
+    /* MAIN */
+    main {
+        padding: 10px 15px;
+    }
+
+    /* PRACTICAL */
+    #practical-informations div {
+        margin-bottom: 15px;
+    }
+
+    .icon {
+        width: 25px;
+    }
+
+    #address.icon {
+        width: 20px;
+    }
+
+    #tramway.icon, #subway.icon {
+        width: 30px;
+    }
 }
 
 
@@ -155,12 +193,35 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1, h2, h3, h4 {
+    color: var(--olive);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    /* padding-top: 20px; */
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* MENU */
 .header {
     background-color: var(--olive);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: sticky;
     top: 0;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 header a, header nav ul li a {
@@ -177,10 +238,33 @@ header a, header nav ul li a {
     font: bold;
 }
 
+#practical a {
+    color: var(--olive);
+}
+
+#practical a:hover {
+    font-weight: bold;
+}
+
+/* IMAGES */
 #carol-marconnet-pic {
    width: 100px; 
 }
 
-.icon {
-    width: 50px;
+.olive-icon {
+    filter: invert(39%) sepia(10%) saturate(535%) hue-rotate(71deg) brightness(92%) contrast(85%);
 }
+
+/* FOOTER */
+
+footer {
+    background-color: var(--olive);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    color: var(--eggshell);
+    text-align: center;
+}
+
