@@ -1,8 +1,16 @@
+
+/* TODO - refacto noms de variables
+        - refacto filter
+        - fix menu mobile */
+
 /* VARIABLES */
 :root {
     --eggshell: #F7F2ED;
-    --olive: #596659;
+    /* --olive: #596659; */
+    --olive: #4C6B7F;
     --gray: #85888C;
+
+    --filtercolor : invert(43%) sepia(9%) saturate(1487%) hue-rotate(160deg) brightness(89%) contrast(89%);
 }
 
 /* RESET */
@@ -14,14 +22,37 @@
 
 /* DESKTOP */
 @media  screen and (min-width: 768px) {
+    body {
+        background-image: url(images/texture.jpg);
+    }
+
+
     #practical, #identity, .header {
         display: flex;
         flex-direction: row;
     }
 
+    #identity {
+        margin-bottom: 15px;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 20px;
+    }
+
     #name-and-catchphrase {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #name-and-catchphrase p {
+        text-align: center;
+    }
+
+    #practical {
+        justify-content: space-around;
     }
 
     /* MENU */
@@ -41,7 +72,8 @@
     .header a, .nav ul li a {
         display: block;        
         text-align: center;
-        padding: 14px 16px;
+        padding: 18px 16px;
+        font-size: larger;
     }
 
     .side-menu, .hamb {
@@ -56,11 +88,56 @@
 
     /* MAIN */
     main {
-        padding: 10px 30px;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 10px 30px; /* TODO : GROS padding latéraux + texture body */
+        background-color: var(--eggshell);
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+    }
+
+    #rate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    /* ICONS AND PICTURES */
+    #carol-marconnet-pic {
+        width: 300px;
     }
 
     .icon {
         width: 50px;
+    }
+
+    #arrow-up {
+        display: none;
+    }
+
+   #address.icon {
+        width: 40px;
+    }
+
+    #tramway.icon, #subway.icon {
+        width: 60px;
     }
 }
 
@@ -78,6 +155,13 @@
 
     #carol-marconnet-pic {
         align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 250px;
+    }
+
+    body {
+        background-color: var(--eggshell);
     }
 
     /* NAV BAR */
@@ -173,11 +257,26 @@
         padding: 10px 15px;
     }
 
+    h1 {
+        font-size: 2em;
+    }
+
+    #presentation p, #production p, #organisation p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
     /* PRACTICAL */
     #practical-informations div {
         margin-bottom: 15px;
     }
 
+    #practical-informations p {
+        padding-top: 5px;
+    }
+
+    /* ICONS AND PICTURES */
     .icon {
         width: 25px;
     }
@@ -194,7 +293,7 @@
 
 /* COMMON PROPERTIES */
 body {
-    background-color: var(--eggshell);
+    /* background-color: var(--eggshell); */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -204,8 +303,6 @@ h1, h2, h3, h4 {
 
 h1 {
     text-align: center;
-    font-size: 2em;
-    /* padding-top: 20px; */
     margin-bottom: 10px;
 }
 
@@ -252,12 +349,10 @@ header a, header nav ul li a {
 }
 
 /* IMAGES */
-#carol-marconnet-pic {
-   width: 100px; 
-}
-
 .olive-icon {
-    filter: invert(39%) sepia(10%) saturate(535%) hue-rotate(71deg) brightness(92%) contrast(85%);
+    filter: var(--filtercolor);
+    /* blue filter : invert(43%) sepia(9%) saturate(1487%) hue-rotate(160deg) brightness(89%) contrast(89%); */
+    /* olive filter: invert(39%) sepia(10%) saturate(535%) hue-rotate(71deg) brightness(92%) contrast(85%); */
 }
 
 /* FOOTER */
