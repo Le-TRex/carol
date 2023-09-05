@@ -217,6 +217,10 @@ h3 {
     margin-bottom: 5px;
 }
 
+#presentation p, #production p, #organisation p {
+    text-align: justify;
+}
+
 /* MENU */
 .header {
     background-color: var(--content);
