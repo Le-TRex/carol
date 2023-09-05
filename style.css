@@ -3,6 +3,7 @@
     --background: #F7F2ED;
     --content: #4C6B7F;
     --shadow: #85888C;
+    --highlight : #D79E44;
     --filter : invert(43%) sepia(9%) saturate(1487%) hue-rotate(160deg) brightness(89%) contrast(89%);
 }
 
@@ -19,27 +20,15 @@
         background-image: url(images/texture.jpg);
     }
 
-    .header {
+    .header, footer {
         display: flex;
-        background-color: var(--content);
-        box-shadow: 1px 1px 5px 0px var(--shadow);
         position: fixed;
-        top: 0;
-        width: 100%;
-        margin-bottom: 20px;
     }
 
     /* MENU */
     nav ul li {
         display: inline;
         float: left;
-    }
-
-    nav ul {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: var(--content);
     }
 
     .header a, .nav ul li a {
@@ -52,7 +41,6 @@
     .active {
         background-color: var(--background);
         color: var(--content);
-        font-weight: bold;
     }
 
     /* MAIN */
@@ -60,7 +48,7 @@
         margin-left: 15%;
         margin-right: 15%;
         margin-top: 100px;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         padding: 10px 30px;
         background-color: var(--background);
     }
@@ -248,7 +236,7 @@ header a, header nav ul li a {
 
 .menu a:hover {
     background-color: var(--background);
-    color: var(--content);
+    color: var(--highlight);
     font: bold;
 }
 
@@ -282,7 +270,7 @@ ul.menu {
 }
 
 #practical a:hover {
-    font-weight: bold;
+    color: var(--highlight);
 }
 
 /* IMAGES */
@@ -295,11 +283,12 @@ ul.menu {
 footer {
     background-color: var(--content);
     box-shadow: 1px 1px 5px 0px var(--shadow);
-    position: sticky;
+    /* position: sticky; */
     bottom: 0;
     width: 100%;
     padding: 15px;
     color: var(--background);
     text-align: center;
+    justify-content: center;
 }
 
