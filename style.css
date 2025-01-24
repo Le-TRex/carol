@@ -75,7 +75,6 @@
     font-size: larger;
   }
 
-  #practical,
   #identity,
   .header {
     flex-direction: row;
@@ -102,12 +101,26 @@
 
   #practical {
     justify-content: space-around;
+    padding-top: 25px;
   }
 
   #rate {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #contact h3,
+  #location h3 {
+    padding-bottom: 20px;
+  }
+
+  #email,
+  #telephone,
+  #appointement,
+  #address,
+  #transportation {
+    padding-bottom: 15px;
   }
 
   /* ICONS AND PICTURES */
@@ -130,10 +143,6 @@
   #tramway.icon,
   #subway.icon {
     width: 60px;
-  }
-  #logo-doctolib,
-  #logo-180degres {
-    width: 20px;
   }
 }
 
@@ -182,12 +191,19 @@
     width: 250px;
   }
 
-  #practical-informations div {
+  #identity div,
+  #identity p {
     margin-bottom: 15px;
   }
 
-  #practical-informations p {
-    padding-top: 5px;
+  /* RATES */
+  #rate p,
+  #email,
+  #telephone,
+  #appointement,
+  #address,
+  #transportation {
+    padding-bottom: 10px;
   }
 
   /* ICONS AND PICTURES */
@@ -238,6 +254,25 @@ h3 {
   text-align: justify;
 }
 
+#appointement,
+#address,
+#email,
+#telephone #doctolib,
+#a180degres {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#email-address,
+#telephone-number,
+#address-link,
+#appointement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* MENU */
 .header {
   background-color: var(--content);
@@ -283,7 +318,8 @@ ul.menu li a {
 }
 
 /* SECTIONS */
-/* TODO refacto CSS suite modifs de HTML */
+#practical,
+#identity,
 #email,
 #telephone,
 #appointement,
@@ -307,28 +343,15 @@ ul.menu li a {
   flex-direction: column;
 }
 
-#mail,
+#email-address,
 #telephone-number,
 #appointement-links,
-#address-link {
+#address-link,
+#doctolib-link,
+#a180degres-link {
   padding-left: 10px;
 }
 
-#practical,
-#identity,
-.location,
-.appointement,
-.appointement-links {
-  display: flex;
-}
-
-.appointement-links {
-  flex-direction: column;
-}
-.location-link,
-.appointement-links {
-  padding-left: 10px;
-}
 #practical a {
   color: var(--content);
 }
@@ -337,13 +360,17 @@ ul.menu li a {
   color: var(--highlight);
 }
 
-/* IMAGES */
+/* IMAGES  AND ICONS */
 .colored-icon {
   filter: var(--filter);
 }
 
-/* FOOTER */
+#logo-doctolib,
+#logo-180degres {
+  width: 20px;
+}
 
+/* FOOTER */
 footer {
   background-color: var(--content);
   box-shadow: 1px 1px 5px 0px var(--shadow);
